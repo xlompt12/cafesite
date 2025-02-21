@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Добро пожаловать в наше кафе! У нас вы найдете вкусные блюда, уютную атмосферу и отличный сервис.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Главная страница | Уютное кафе в Павловске</title>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Сели  <span>Поели</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="menu.html" class="nav-link">Меню</a></li>
+                    <li><a href="booking.html" class="nav-link">Бронь стола</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="order.html" class="nav-link">Заказ еды</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Добро пожаловать в наше кафе!</h2>
+                <p>У нас вы найдете вкусные блюда, уютную атмосферу и отличный сервис.</p>
+                <a href="booking.html" class="btn">Забронировать стол</a>
+            </div>
+            <div class="hero-slider">
+                <img src="https://avatars.mds.yandex.net/i?id=6a579f8d63509bfc6b9b29884b5998a4_l-5232386-images-thumbs&n=13" alt="Интерьер кафе">
+                
+            </div>
+        </section>
+
+        <section class="address-section">
+            <h2>Наш адрес</h2>
+            <p>с. Павловск, ул. Магистральная 1/1</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="special-offers">
+            <h2>Специальные предложения</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <h3>Скидка 20% на завтраки</h3>
+                    <p>Каждый день с 8:00 до 11:00</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Бесплатный десерт</h3>
+                    <p>При заказе от 1000 рублей</p>
+                </div>
+                <div class="offer-card">
+                    <h3>Счастливые часы</h3>
+                    <p>Скидка 30% на кофе с 15:00 до 17:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

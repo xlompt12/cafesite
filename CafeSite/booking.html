@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Забронируйте столик в нашем уютном кафе. Удобная форма для выбора времени, количества человек и предоплаты.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Бронирование стола | Сели Поели</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Сели <span>Поели</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="menu.html" class="nav-link">Меню</a></li>
+                    <li><a href="booking.html" class="nav-link active">Бронь стола</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="order.html" class="nav-link">Заказ еды</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="booking-page">
+        <section class="booking-hero">
+            <div class="booking-hero-content">
+                <h2>Забронируйте ваш столик</h2>
+                <p>Выберите удобное время и количество гостей. Мы позаботимся о вашем комфорте!</p>
+            </div>
+        </section>
+
+        <section class="reservation-section">
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="people">Сколько человек:</label>
+                    <input type="number" id="people" name="people" min="1" max="20" required placeholder="Введите количество человек">
+                </div>
+
+                <div class="form-group">
+                    <label for="table">Номер стола (по желанию):</label>
+                    <input type="text" id="table" name="table" placeholder="Номер стола (необязательно)">
+                </div>
+
+                <div class="form-group">
+                    <label for="time">На какое время:</label>
+                    <input type="datetime-local" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prepayment">Предоплата (руб.):</label>
+                    <input type="number" id="prepayment" name="prepayment" min="0" required placeholder="Введите сумму предоплаты">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Забронировать</button>
+            </form>
+
+            <!-- Сообщение об успешной брони -->
+            <div id="success-message" style="display:none; margin-top: 20px; color: green;">
+                Спасибо за бронирование! Мы свяжемся с вами для подтверждения.
+            </div>
+        </section>
+
+    <!-- Подключение скриптов -->
+    <script src="./scripts.js"></script>
+
+    <!-- Добавляем JavaScript для обработки формы -->
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // предотвращаем стандартное поведение формы
+
+            // Здесь можно добавить код для отправки данных на сервер
+
+            // Отображаем сообщение об успешной брони
+            document.getElementById('success-message').style.display = 'block';
+
+            // Очищаем форму после отправки
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

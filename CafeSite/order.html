@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Заказ еды | Сели Поели</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">Сели <span>Поели</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="menu.html" class="nav-link">Меню</a></li>
+                    <li><a href="booking.html" class="nav-link">Бронь стола</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="order-section">
+            <h2>Выберите блюда</h2>
+            <p>Добавьте блюда в вашу корзину, и затем оформите заказ!</p>
+
+            <!-- Корзина -->
+            <div class="cart">
+                <h3>Ваша корзина</h3>
+                <ul id="cart-items"></ul>
+                <div class="cart-total">
+                    <strong>Итого: </strong><span id="total-price">0 ₽</span>
+                </div>
+                <button id="checkout-button" class="btn btn-primary">Оформить заказ</button>
+            </div>
+
+            <!-- Меню -->
+            <section class="menu-categories">
+                <!-- Горячие напитки -->
+                <div class="category">
+                    <h2>Горячие напитки</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Кофе" data-price="250">
+                            <img src="https://avatars.mds.yandex.net/i?id=6bd0e62da4684259007c516969abc58d_l-5233330-images-thumbs&n=13" alt="Кофе">
+                            <h3>Кофе</h3>
+                            <p>Ароматный кофе из свежеобжаренных зерен.</p>
+                            <span class="price">250 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                        <div class="menu-item" data-name="Чай" data-price="200">
+                            <img src="https://avatars.mds.yandex.net/i?id=46c92241452c6919bf32fd5e2c1644a8_l-5384143-images-thumbs&n=13" alt="Чай">
+                            <h3>Чай</h3>
+                            <p>Традиционный черный, зеленый или травяной чай</p>
+                            <span class="price">200 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Холодные напитки -->
+                <div class="category">
+                    <h2>Холодные напитки</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Соки" data-price="300">
+                            <img src="https://avatars.mds.yandex.net/i?id=7d11f8695752a60a6622e8273b566305_l-5243206-images-thumbs&n=13" alt="Сок">
+                            <h3>Соки</h3>
+                            <p>Свежевыжатые соки из сезонных фруктов.</p>
+                            <span class="price">300 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                        <div class="menu-item" data-name="Смузи" data-price="350">
+                            <img src="https://avatars.mds.yandex.net/i?id=43f18af49ab8d90d1747e909bb032e3428963858-10766747-images-thumbs&n=13" alt="Смузи">
+                            <h3>Смузи</h3>
+                            <p>Освежающие смузи с ягодами и фруктами.</p>
+                            <span class="price">350 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Горячие блюда -->
+                <div class="category">
+                    <h2>Горячие блюда</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item" data-name="Супы" data-price="400">
+                            <img src="https://www.chefmarket.ru/blog/wp-content/uploads/2020/02/country-style-e1582966667971.jpg" alt="Суп">
+                            <h3>Супы</h3>
+                            <p>Ароматные супы на основе домашнего бульона.</p>
+                            <span class="price">400 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                        <div class="menu-item" data-name="Салаты" data-price="450">
+                            <img src="https://avatars.mds.yandex.net/i?id=7ad7c4cbf8565e56ee868229661027e26ac702fee39471c0-4937949-images-thumbs&n=13" alt="Салат">
+                            <h3>Салаты</h3>
+                            <p>Свежие салаты с сезонными овощами.</p>
+                            <span class="price">450 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                        <div class="menu-item" data-name="Выпечка" data-price="300">
+                            <img src="https://avatars.mds.yandex.net/i?id=8fd0b6ad2201621eed12b3cae2f62f12_l-5492246-images-thumbs&n=13" alt="Выпечка">
+                            <h3>Выпечка</h3>
+                            <p>Домашняя выпечка и десерты.</p>
+                            <span class="price">300 ₽</span>
+                            <button class="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Оформление заказа</h2>
+            <ul id="modal-cart-items"></ul>
+            <div class="modal-total">
+                <strong>Итого: </strong><span id="modal-total-price">0 ₽</span>
+            </div>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <button id="submit-order-button" class="btn btn-primary">Подтвердить заказ</button>
+        </div>
+    </div>
+
+
+    <!-- Подключение скриптов -->
+    <script src="./scripts.js"></script>
+
+    <!-- Скрипт для обработки добавления в корзину -->
+    <script>
+        const cartItems = [];
+        const cartItemsList = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+        const modalCartItemsList = document.getElementById('modal-cart-items');
+        const modalTotalPriceElement = document.getElementById('modal-total-price');
+        const checkoutButton = document.getElementById('checkout-button');
+        const checkoutModal = document.getElementById('checkout-modal');
+        const closeButton = document.querySelector('.close-button');
+        const submitOrderButton = document.getElementById('submit-order-button');
+
+        // Обработчик для добавления в корзину
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const menuItem = button.closest('.menu-item');
+                const itemName = menuItem.getAttribute('data-name');
+                const itemPrice = parseInt(menuItem.getAttribute('data-price'));
+                
+                cartItems.push({ name: itemName, price: itemPrice });
+                
+                updateCart();
+            });
+        });
+
+        // Функция для обновления корзины
+        function updateCart() {
+            cartItemsList.innerHTML = '';
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price} ₽`;
+                cartItemsList.appendChild(li);
+                
+                totalPrice += item.price;
+            });
+
+            totalPriceElement.textContent = `${totalPrice} ₽`;
+        }
+
+        // Обработчик для кнопки "Оформить заказ"
+        checkoutButton.addEventListener('click', () => {
+            // Открываем модальное окно
+            checkoutModal.style.display = 'block';
+
+            // Обновляем содержимое модального окна
+            modalCartItemsList.innerHTML = '';
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price} ₽`;
+                modalCartItemsList.appendChild(li);
+                
+                totalPrice += item.price;
+            });
+
+            modalTotalPriceElement.textContent = `${totalPrice} ₽`;
+        });
+
+        // Обработчик для кнопки "Закрыть" в модальном окне
+        closeButton.addEventListener('click', () => {
+            checkoutModal.style.display = 'none';
+        });
+
+        // Обработчик для отправки заказа
+        submitOrderButton.addEventListener('click', () => {
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+
+            alert(`Заказ оформлен!\nИмя: ${name}\nАдрес: ${address}\nОбщая стоимость: ${modalTotalPriceElement.textContent}`);
+
+            // Очищаем корзину после оформления заказа
+            cartItems.length = 0;
+            updateCart();
+
+            // Закрываем модальное окно
+            checkoutModal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
